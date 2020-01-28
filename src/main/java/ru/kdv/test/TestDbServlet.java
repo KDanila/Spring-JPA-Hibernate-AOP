@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 /**
  * Servlet implementation class TestDbServlet
  */
-@WebServlet("/TestDbServlet")
+@WebServlet("/")
 public class TestDbServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
