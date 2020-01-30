@@ -2,18 +2,16 @@ package ru.kdv.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(path="/customer")
 public class CustomerController {
-
-	@GetMapping(path = "/list")
-	public String listCustomers(Model theModel) {
+	@RequestMapping(path = "/list", method = RequestMethod.GET)
+	public String listCustomers(Model model) {
 		return "list-customers";
 	}
-	
 }
 
 
