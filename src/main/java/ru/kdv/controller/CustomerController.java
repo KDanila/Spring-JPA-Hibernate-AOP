@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(path="/customer")
 public class CustomerController {
 	@RequestMapping(path = "/list", method = RequestMethod.GET)
 	public String listCustomers(Model model) {

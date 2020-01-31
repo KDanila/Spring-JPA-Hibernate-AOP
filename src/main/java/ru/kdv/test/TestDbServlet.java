@@ -1,3 +1,4 @@
+/*
 package ru.kdv.test;
 
 import javax.servlet.ServletException;
@@ -10,15 +11,19 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+*/
 /**
  * Servlet implementation class TestDbServlet
- */
+ *//*
+
 public class TestDbServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
+	*/
+/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 *//*
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
 
 		// setup connection variables
@@ -59,3 +64,4 @@ public class TestDbServlet extends HttpServlet {
 
 
 
+*/
