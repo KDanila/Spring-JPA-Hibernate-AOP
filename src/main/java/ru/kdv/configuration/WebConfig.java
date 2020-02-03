@@ -1,10 +1,10 @@
-/*
 package ru.kdv.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -19,6 +19,11 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/list").setViewName("list-customers");
     }
 
+    @Override
+    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
+
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver bean = new InternalResourceViewResolver();
@@ -30,4 +35,3 @@ public class WebConfig implements WebMvcConfigurer {
         return bean;
     }
 }
-*/
