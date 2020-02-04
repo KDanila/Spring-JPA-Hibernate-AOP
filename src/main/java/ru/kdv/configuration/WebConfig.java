@@ -19,11 +19,6 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/list").setViewName("list-customers");
     }
 
-    @Override
-    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-    }
-
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver bean = new InternalResourceViewResolver();
