@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CustomerController {
 	@GetMapping("/list")
 	public String listCustomers(Model model) {
-
 		return "list-customers";
 	}
 }
