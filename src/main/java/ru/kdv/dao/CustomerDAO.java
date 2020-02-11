@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface CustomerDAO {
-    public List<Customer> getCustomers();
+    List<Customer> getCustomers();
 }

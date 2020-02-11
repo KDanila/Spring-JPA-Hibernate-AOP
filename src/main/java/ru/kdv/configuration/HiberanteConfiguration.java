@@ -65,7 +65,7 @@ public class HiberanteConfiguration {
     /**
      * Initialize Transaction Manager
      *
-     * @param sessionFactory
+     * @param sessionFactory - factory
      * @return HibernateTransactionManager
      */
     @Bean
