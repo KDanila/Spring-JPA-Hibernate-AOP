@@ -1,5 +1,6 @@
 package ru.kdv.dao;
 
+import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,13 +11,13 @@ import ru.kdv.entity.Customer;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@RequiredArgsConstructor
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
-    @Autowired
-    private SessionFactory sessionFactory;
+
+    private final SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Customer> getCustomers() {
         Session session = sessionFactory.getCurrentSession();
 

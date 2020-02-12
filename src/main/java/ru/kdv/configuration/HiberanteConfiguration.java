@@ -1,5 +1,6 @@
 package ru.kdv.configuration;
 
+import lombok.AllArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AvailableSettings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,12 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
+@AllArgsConstructor
 @EnableTransactionManagement
 @PropertySource(value = {"classpath:application.properties"})
 public class HiberanteConfiguration {
 
-    @Autowired
-    private Environment env;
+    private final Environment env;
 
     /**
      * Initialize dataSource
