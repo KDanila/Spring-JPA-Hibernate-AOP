@@ -6,6 +6,7 @@ import org.hibernate.cfg.AvailableSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -18,6 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @AllArgsConstructor
+@EnableAspectJAutoProxy
 @EnableTransactionManagement
 @PropertySource(value = {"classpath:application.properties"})
 public class HiberanteConfiguration {
